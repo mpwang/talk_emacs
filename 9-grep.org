@@ -1,0 +1,19 @@
+#+REVEAL_THEME: solarized
+* Vanilla Emacs
+- grep
+- occur
+- rgrep
+- grep-find
+
+* With Helm
+** MAC & LINUX helm-ag + the sliver searcher
+- helm-ag-this-file
+- helm-ag-project-root
+- helm-ag-buffers
+- BOOM!
+- M-m s f
+- , s f
+
+** Windows helm-pt + the plantinum searcher
+- helm-pt
+

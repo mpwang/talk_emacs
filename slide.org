@@ -1,0 +1,79 @@
+#+REVEAL_THEME: solarized
+* Emacs分享
+* Emacs历史
+** Since 1975
+** Richard Stallman
+- 自由软件运动精神領袖
+- GNU(GNU C Compile/GDB)工程的发起者
+- 自由软件基金会的创立者
+** 成熟稳定的软件
+- 活跃的社区
+- ELPA(Emacs Lisp Package Archive) 数量巨大的插件
+** 强大的macro
+** 扩展性/可编程的编程语言: Emacs lisp
+* What can Emacs do
+Emacs 不仅仅是一个编辑器，它是一个整合环境，或可称它为集成开发环境，这些功能如让使用者置身于全功能的操作系统中。Emacs可以：
+
+- 收发电子邮件、上新闻组（Gnus）
+- 無縫直接编辑远程档案（Tramp）
+- 通过Telnet登录远程主机
+- 操作shell（M-x EShell，Term）
+- 結合git, mercurial等版本控制系統並直接操作（Magit，VC）
+- 上Twitter（Twittering-mode）
+- 登陆IRC和朋友交流（M-x ERC，rcirc）
+- 电子数据表
+- 模拟其他编辑器，如vi（Evil-mode）、WordStar、EDT、TPU等
+- 编辑Wiki (Wikipedia-mode)
+- 对多种编程语言的编辑，如C/C++、Perl、Python、Lisp等等
+- 调试程序，结合GDB，EDebug等。
+- 玩游戏
+- 计算器
+- 心裡諮商（M-x doctor）
+- 煮咖啡
+- 记笔记、日记（Org-mode）
+- 管理日程，Task，ToDo，约会等GTD（Org-mode）
+- 寫作與出版（Org-mode，Muse-mode）
+- 目录管理（Dired）
+- 文件比较、合并（Ediff）
+- 阅读info和man文档（M-x info，woman）
+- 浏览网站（M-x eww）
+- 为各种程序（TeX、LaTeX等）提供统一的操作界面
+- ……
+* Editor War: EMACS VS VIM
+** Emacs 1975 / Vim 1991
+** Emacs 长时间编辑 / Vim 短时间编辑
+** 个人偏好
+* Emacs Showcases
+** 扩展，自定义函数
+** snippets
+** 按语言选择代码
+** mark multiple/visual regexp
+** 导航: jump quickly
+*** avy-mode
+*** switch window
+** align regexp
+** undo tree
+** 搜索
+*** grep/rgrep/grep-find
+*** occur
+*** helm-ag/helm-pt
+** macro example
+* Emacs for VIM user
+** EVIL: Emcas VIm Layer
+Emacs almost can do anything Vim can do
+** Spacemacs
+Emacs + Vim
+* Right Tool for the Right Job
+** Emacs isn't for everyone
+** learn curve
+* 效率
+** 投资硬件
+*** 键盘
+- RSI: Typing Habits, Repetitive Strain Injury 交换ctrl与alt键
+- the IBM PC keyboard, 1990s
+- 在Emacs诞生时，键盘的Ctrl键非常大，并且在空格键的旁边，使用大拇指很容易按。
+- http://ergoemacs.org/emacs/emacs_kb_shortcuts_pain.html
+*** 轨迹球
+*** 多显示屏
+** 选择熟悉顺手的工具
+* Question

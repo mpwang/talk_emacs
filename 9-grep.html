@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<meta name="author" content="(Randall Wang)"/>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+<link rel="stylesheet" href="./reveal.js/css/theme/solarized.css" id="theme"/>
+<link rel="stylesheet" href=""/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1></h1>
+<h2>Randall Wang</h2>
+<h2><a href="mailto:rwang@Randalls-Mac-Pro.local">rwang@Randalls-Mac-Pro.local</a></h2>
+<h2></h2>
+</section>
+<section id="table-of-contents">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-orgheadline1">1. Vanilla Emacs</a></li>
+<li><a href="#/slide-orgheadline4">2. With Helm</a>
+<ul>
+<li><a href="#/slide-orgheadline2">2.1. MAC &amp; LINUX helm-ag + the sliver searcher</a></li>
+<li><a href="#/slide-orgheadline3">2.2. Windows helm-pt + the plantinum searcher</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-orgheadline1">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Vanilla Emacs</h2>
+<ul>
+<li>grep</li>
+<li>occur</li>
+<li>rgrep</li>
+<li>grep-find</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline4">
+<h2 id="orgheadline4"><span class="section-number-2">2</span> With Helm</h2>
+<div class="outline-text-2" id="text-2">
+</div></section>
+<section id="slide-orgheadline2">
+<h3 id="orgheadline2"><span class="section-number-3">2.1</span> MAC &amp; LINUX helm-ag + the sliver searcher</h3>
+<ul>
+<li>helm-ag-this-file</li>
+<li>helm-ag-project-root</li>
+<li>helm-ag-buffers</li>
+<li>BOOM!</li>
+<li>M-m s f</li>
+<li>, s f</li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline3">
+<h3 id="orgheadline3"><span class="section-number-3">2.2</span> Windows helm-pt + the plantinum searcher</h3>
+<ul>
+<li>helm-pt</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: true,
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

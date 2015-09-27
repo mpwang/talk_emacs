@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<meta name="author" content="(Randall Wang)"/>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+<link rel="stylesheet" href="./reveal.js/css/theme/solarized.css" id="theme"/>
+<link rel="stylesheet" href=""/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1></h1>
+<h2>Randall Wang</h2>
+<h2><a href="mailto:rwang@Randalls-Mac-Pro.local">rwang@Randalls-Mac-Pro.local</a></h2>
+<h2></h2>
+</section>
+<section id="table-of-contents">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-orgheadline1">1. Emacs分享</a></li>
+<li><a href="#/slide-orgheadline7">2. Emacs历史</a>
+<ul>
+<li><a href="#/slide-orgheadline2">2.1. Since 1975</a></li>
+<li><a href="#/slide-orgheadline3">2.2. Richard Stallman</a></li>
+<li><a href="#/slide-orgheadline4">2.3. 成熟稳定的软件</a></li>
+<li><a href="#/slide-orgheadline5">2.4. 强大的macro</a></li>
+<li><a href="#/slide-orgheadline6">2.5. 扩展性/可编程的编程语言: Emacs lisp</a></li>
+</ul>
+</li>
+<li><a href="#/slide-orgheadline8">3. What can Emacs do</a></li>
+<li><a href="#/slide-orgheadline12">4. Editor War: EMACS VS VIM</a>
+<ul>
+<li><a href="#/slide-orgheadline9">4.1. Emacs 1975 / Vim 1991</a></li>
+<li><a href="#/slide-orgheadline10">4.2. Emacs 长时间编辑 / Vim 短时间编辑</a></li>
+<li><a href="#/slide-orgheadline11">4.3. 个人偏好</a></li>
+</ul>
+</li>
+<li><a href="#/slide-orgheadline27">5. Emacs Showcases</a>
+<ul>
+<li><a href="#/slide-orgheadline13">5.1. 扩展，自定义函数</a></li>
+<li><a href="#/slide-orgheadline14">5.2. snippets</a></li>
+<li><a href="#/slide-orgheadline15">5.3. 按语言选择代码</a></li>
+<li><a href="#/slide-orgheadline16">5.4. mark multiple/visual regexp</a></li>
+<li><a href="#/slide-orgheadline19">5.5. 导航: jump quickly</a>
+<ul>
+<li><a href="#/slide-orgheadline17">5.5.1. avy-mode</a></li>
+<li><a href="#/slide-orgheadline18">5.5.2. switch window</a></li>
+</ul>
+</li>
+<li><a href="#/slide-orgheadline20">5.6. align regexp</a></li>
+<li><a href="#/slide-orgheadline21">5.7. undo tree</a></li>
+<li><a href="#/slide-orgheadline25">5.8. 搜索</a>
+<ul>
+<li><a href="#/slide-orgheadline22">5.8.1. grep/rgrep/grep-find</a></li>
+<li><a href="#/slide-orgheadline23">5.8.2. occur</a></li>
+<li><a href="#/slide-orgheadline24">5.8.3. helm-ag/helm-pt</a></li>
+</ul>
+</li>
+<li><a href="#/slide-orgheadline26">5.9. macro example</a></li>
+</ul>
+</li>
+<li><a href="#/slide-orgheadline30">6. Emacs for VIM user</a>
+<ul>
+<li><a href="#/slide-orgheadline28">6.1. EVIL: Emcas VIm Layer</a></li>
+<li><a href="#/slide-orgheadline29">6.2. Spacemacs</a></li>
+</ul>
+</li>
+<li><a href="#/slide-orgheadline33">7. Right Tool for the Right Job</a>
+<ul>
+<li><a href="#/slide-orgheadline31">7.1. Emacs isn't for everyone</a></li>
+<li><a href="#/slide-orgheadline32">7.2. learn curve</a></li>
+</ul>
+</li>
+<li><a href="#/slide-orgheadline39">8. 效率</a>
+<ul>
+<li><a href="#/slide-orgheadline37">8.1. 投资硬件</a>
+<ul>
+<li><a href="#/slide-orgheadline34">8.1.1. 键盘</a></li>
+<li><a href="#/slide-orgheadline35">8.1.2. 轨迹球</a></li>
+<li><a href="#/slide-orgheadline36">8.1.3. 多显示屏</a></li>
+</ul>
+</li>
+<li><a href="#/slide-orgheadline38">8.2. 选择熟悉顺手的工具</a></li>
+</ul>
+</li>
+<li><a href="#/slide-orgheadline40">9. Question</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-orgheadline1">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Emacs分享</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline7">
+<h2 id="orgheadline7"><span class="section-number-2">2</span> Emacs历史</h2>
+<div class="outline-text-2" id="text-2">
+</div></section>
+<section id="slide-orgheadline2">
+<h3 id="orgheadline2"><span class="section-number-3">2.1</span> Since 1975</h3>
+</section>
+<section id="slide-orgheadline3">
+<h3 id="orgheadline3"><span class="section-number-3">2.2</span> Richard Stallman</h3>
+<ul>
+<li>自由软件运动精神領袖</li>
+<li>GNU(GNU C Compile/GDB)工程的发起者</li>
+<li>自由软件基金会的创立者</li>
+
+</ul>
+</section>
+<section id="slide-orgheadline4">
+<h3 id="orgheadline4"><span class="section-number-3">2.3</span> 成熟稳定的软件</h3>
+<ul>
+<li>活跃的社区</li>
+<li>ELPA(Emacs Lisp Package Archive) 数量巨大的插件</li>
+
+</ul>
+</section>
+<section id="slide-orgheadline5">
+<h3 id="orgheadline5"><span class="section-number-3">2.4</span> 强大的macro</h3>
+</section>
+<section id="slide-orgheadline6">
+<h3 id="orgheadline6"><span class="section-number-3">2.5</span> 扩展性/可编程的编程语言: Emacs lisp</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline8">
+<h2 id="orgheadline8"><span class="section-number-2">3</span> What can Emacs do</h2>
+<p>
+Emacs 不仅仅是一个编辑器，它是一个整合环境，或可称它为集成开发环境，这些功能如让使用者置身于全功能的操作系统中。Emacs可以：
+</p>
+
+<ul>
+<li>收发电子邮件、上新闻组（Gnus）</li>
+<li>無縫直接编辑远程档案（Tramp）</li>
+<li>通过Telnet登录远程主机</li>
+<li>操作shell（M-x EShell，Term）</li>
+<li>結合git, mercurial等版本控制系統並直接操作（Magit，VC）</li>
+<li>上Twitter（Twittering-mode）</li>
+<li>登陆IRC和朋友交流（M-x ERC，rcirc）</li>
+<li>电子数据表</li>
+<li>模拟其他编辑器，如vi（Evil-mode）、WordStar、EDT、TPU等</li>
+<li>编辑Wiki (Wikipedia-mode)</li>
+<li>对多种编程语言的编辑，如C/C++、Perl、Python、Lisp等等</li>
+<li>调试程序，结合GDB，EDebug等。</li>
+<li>玩游戏</li>
+<li>计算器</li>
+<li>心裡諮商（M-x doctor）</li>
+<li>煮咖啡</li>
+<li>记笔记、日记（Org-mode）</li>
+<li>管理日程，Task，ToDo，约会等GTD（Org-mode）</li>
+<li>寫作與出版（Org-mode，Muse-mode）</li>
+<li>目录管理（Dired）</li>
+<li>文件比较、合并（Ediff）</li>
+<li>阅读info和man文档（M-x info，woman）</li>
+<li>浏览网站（M-x eww）</li>
+<li>为各种程序（TeX、LaTeX等）提供统一的操作界面</li>
+<li>……</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline12">
+<h2 id="orgheadline12"><span class="section-number-2">4</span> Editor War: EMACS VS VIM</h2>
+<div class="outline-text-2" id="text-4">
+</div></section>
+<section id="slide-orgheadline9">
+<h3 id="orgheadline9"><span class="section-number-3">4.1</span> Emacs 1975 / Vim 1991</h3>
+</section>
+<section id="slide-orgheadline10">
+<h3 id="orgheadline10"><span class="section-number-3">4.2</span> Emacs 长时间编辑 / Vim 短时间编辑</h3>
+</section>
+<section id="slide-orgheadline11">
+<h3 id="orgheadline11"><span class="section-number-3">4.3</span> 个人偏好</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline27">
+<h2 id="orgheadline27"><span class="section-number-2">5</span> Emacs Showcases</h2>
+<div class="outline-text-2" id="text-5">
+</div></section>
+<section id="slide-orgheadline13">
+<h3 id="orgheadline13"><span class="section-number-3">5.1</span> 扩展，自定义函数</h3>
+</section>
+<section id="slide-orgheadline14">
+<h3 id="orgheadline14"><span class="section-number-3">5.2</span> snippets</h3>
+</section>
+<section id="slide-orgheadline15">
+<h3 id="orgheadline15"><span class="section-number-3">5.3</span> 按语言选择代码</h3>
+</section>
+<section id="slide-orgheadline16">
+<h3 id="orgheadline16"><span class="section-number-3">5.4</span> mark multiple/visual regexp</h3>
+</section>
+<section id="slide-orgheadline19">
+<h3 id="orgheadline19"><span class="section-number-3">5.5</span> 导航: jump quickly</h3>
+<div class="outline-text-3" id="text-5-5">
+</div></section>
+<section id="slide-orgheadline17">
+<h4 id="orgheadline17"><span class="section-number-4">5.5.1</span> avy-mode</h4>
+</section>
+<section id="slide-orgheadline18">
+<h4 id="orgheadline18"><span class="section-number-4">5.5.2</span> switch window</h4>
+</section>
+<section id="slide-orgheadline20">
+<h3 id="orgheadline20"><span class="section-number-3">5.6</span> align regexp</h3>
+</section>
+<section id="slide-orgheadline21">
+<h3 id="orgheadline21"><span class="section-number-3">5.7</span> undo tree</h3>
+</section>
+<section id="slide-orgheadline25">
+<h3 id="orgheadline25"><span class="section-number-3">5.8</span> 搜索</h3>
+<div class="outline-text-3" id="text-5-8">
+</div></section>
+<section id="slide-orgheadline22">
+<h4 id="orgheadline22"><span class="section-number-4">5.8.1</span> grep/rgrep/grep-find</h4>
+</section>
+<section id="slide-orgheadline23">
+<h4 id="orgheadline23"><span class="section-number-4">5.8.2</span> occur</h4>
+</section>
+<section id="slide-orgheadline24">
+<h4 id="orgheadline24"><span class="section-number-4">5.8.3</span> helm-ag/helm-pt</h4>
+</section>
+<section id="slide-orgheadline26">
+<h3 id="orgheadline26"><span class="section-number-3">5.9</span> macro example</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline30">
+<h2 id="orgheadline30"><span class="section-number-2">6</span> Emacs for VIM user</h2>
+<div class="outline-text-2" id="text-6">
+</div></section>
+<section id="slide-orgheadline28">
+<h3 id="orgheadline28"><span class="section-number-3">6.1</span> EVIL: Emcas VIm Layer</h3>
+<p>
+Emacs almost can do anything Vim can do
+</p>
+</section>
+<section id="slide-orgheadline29">
+<h3 id="orgheadline29"><span class="section-number-3">6.2</span> Spacemacs</h3>
+<p>
+Emacs + Vim
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline33">
+<h2 id="orgheadline33"><span class="section-number-2">7</span> Right Tool for the Right Job</h2>
+<div class="outline-text-2" id="text-7">
+</div></section>
+<section id="slide-orgheadline31">
+<h3 id="orgheadline31"><span class="section-number-3">7.1</span> Emacs isn't for everyone</h3>
+</section>
+<section id="slide-orgheadline32">
+<h3 id="orgheadline32"><span class="section-number-3">7.2</span> learn curve</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline39">
+<h2 id="orgheadline39"><span class="section-number-2">8</span> 效率</h2>
+<div class="outline-text-2" id="text-8">
+</div></section>
+<section id="slide-orgheadline37">
+<h3 id="orgheadline37"><span class="section-number-3">8.1</span> 投资硬件</h3>
+<div class="outline-text-3" id="text-8-1">
+</div></section>
+<section id="slide-orgheadline34">
+<h4 id="orgheadline34"><span class="section-number-4">8.1.1</span> 键盘</h4>
+<ul>
+<li>RSI: Typing Habits, Repetitive Strain Injury 交换ctrl与alt键</li>
+<li>the IBM PC keyboard, 1990s</li>
+<li>在Emacs诞生时，键盘的Ctrl键非常大，并且在空格键的旁边，使用大拇指很容易按。</li>
+<li><a href="http://ergoemacs.org/emacs/emacs_kb_shortcuts_pain.html">http://ergoemacs.org/emacs/emacs_kb_shortcuts_pain.html</a></li>
+
+</ul>
+</section>
+<section id="slide-orgheadline35">
+<h4 id="orgheadline35"><span class="section-number-4">8.1.2</span> 轨迹球</h4>
+</section>
+<section id="slide-orgheadline36">
+<h4 id="orgheadline36"><span class="section-number-4">8.1.3</span> 多显示屏</h4>
+</section>
+<section id="slide-orgheadline38">
+<h3 id="orgheadline38"><span class="section-number-3">8.2</span> 选择熟悉顺手的工具</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline40">
+<h2 id="orgheadline40"><span class="section-number-2">9</span> Question</h2>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: true,
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
